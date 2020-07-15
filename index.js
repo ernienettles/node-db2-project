@@ -1,6 +1,6 @@
 const express = require('express');
 const server = express();
-const db = require('./data/dbConfig');
+const db = require('./data/connection');
 
 server.use(express.json());
 
@@ -24,6 +24,6 @@ server.post('/api/cars', async (req, res) => {
 
 const PORT = process.env.PORT || 9000;
 
-server.listen(5000, () => {
+server.listen(9000, () => {
   console.log(`\n== API running on port ${PORT} ==\n`);
 })
